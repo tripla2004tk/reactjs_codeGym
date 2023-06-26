@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validate Username</title>
+    <script>
+      function isValidUsername(username) {
+        const regex = /^[a-z0-9_]{6,}$/;
+        return regex.test(username);
+      }
+
+      function validateUsername() {
+        const username = document.getElementById("username").value;
+        if (isValidUsername(username)) {
+          alert("Tên tài khoản hợp lệ!");
+        } else {
+          alert("Tên tài khoản không hợp lệ!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="username">Tên tài khoản:</label>
+      <input type="text" id="username" name="username" />
+      <button type="button" onclick="validateUsername()">Kiểm tra</button>
+    </form>
+  </body>
+</html>
