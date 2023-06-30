@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Zoo {
+    constructor() {
+        this.animals = new Set();
+    }
+
+    addAnimal(animal) {
+        this.animals.add(animal);
+    }
+
+    hasAnimal(animal) {
+        return this.animals.has(animal);
+    }
+
+    removeAnimal(animal) {
+        this.animals.delete(animal);
+    }
+
+    printAnimals() {
+        console.log('Animals in the zoo:');
+        for (const animal of this.animals) {
+            console.log(animal);
+        }
+    }
+}
+
+const zoo = new Zoo();
+zoo.addAnimal('Lion');
+zoo.addAnimal('Tiger');
+zoo.addAnimal('Elephant');
+console.log(zoo.hasAnimal('Lion'));
+zoo.removeAnimal('Tiger');
+zoo.printAnimals(); 
+    </script>
+</body>
+</html>
